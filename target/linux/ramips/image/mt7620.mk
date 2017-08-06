@@ -369,6 +369,22 @@ define Device/tiny-ac
 endef
 TARGET_DEVICES += tiny-ac
 
+define Device/u35wf
+  DTS := U35WF
+  IMAGE_SIZE := $(ralink_default_fw_size_16M)
+  IMAGES += factory.bin
+  SUPPORTED_DEVICES += u35wf
+  IMAGE/factory.bin := $$(sysupgrade_bin) | check-size $$$$(IMAGE_SIZE)
+  DEVICE_TITLE := Kimax U35WF
+  DEVICE_PACKAGES := kmod-usb-core kmod-usb2 kmod-usb-ohci \
+			kmod-usb-ledtrig-usbport kmod-ata-core kmod-scsi-core kmod-usb-storage  \
+			kmod-usb-storage-extras swap-utils mount-utils kmod-nls-utf8  \
+			kmod-nls-base kmod-fs-ext4 kmod-fs-exfat kmod-fs-msdos  \
+			kmod-fs-ntfs kmod-fs-vfat ntfs-3g e2fsprogs  \
+			block-mount blkid ntfsprogs_ntfs-3g
+endef
+TARGET_DEVICES += u35wf
+
 define Device/whr-1166d
   DTS := WHR-1166D
   IMAGE_SIZE := 15040k

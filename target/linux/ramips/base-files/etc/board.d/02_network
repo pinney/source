@@ -292,7 +292,8 @@ ramips_setup_interfaces()
 		ucidef_add_switch "switch0" \
 			"0:lan" "1:lan" "2:lan" "3:lan" "4:wan" "8@eth0"
 		;;
-	tew-638apb-v2)
+	tew-638apb-v2|\
+	u35wf)
 		ucidef_add_switch "switch0" \
 			"4:lan" "6@eth0"
 		;;
@@ -466,6 +467,9 @@ ramips_setup_macs()
 	tiny-ac)
 		lan_mac=$(mtd_get_mac_ascii u-boot-env LAN_MAC_ADDR)
 		wan_mac=$(mtd_get_mac_ascii u-boot-env WAN_MAC_ADDR)
+		;;
+	u35wf)
+		wan_mac=$(mtd_get_mac_binary factory 4)
 		;;
 	vr500)
 		lan_mac=$(mtd_get_mac_binary factory 57344)

@@ -167,7 +167,8 @@ get_status_led() {
 	linkits7688d)
 		[ "$1" = "upgrade" ] && status_led="mediatek:orange:wifi"
 		;;
-	m2m)
+	m2m|\
+	u35wf)
 		status_led="$board:blue:wifi"
 		;;
 	gl-mt300n-v2)

@@ -353,6 +353,10 @@ tl-wr841n-v13)
 	ucidef_set_led_switch "lan4" "lan4" "$board:green:lan4" "switch0" "0x10"
 	ucidef_set_led_switch "wan" "wan" "$board:green:wan" "switch0" "0x01"
 	;;
+u35wf)
+	set_wifi_led "$board:blue:wifi"
+	ucidef_set_led_netdev "lan" "lan" "$board:green:ethernet" "eth0.1" "tx rx"
+	;;
 vocore-8M|\
 vocore-16M)
 	ucidef_set_led_netdev "eth" "ETH" "vocore:orange:eth" "eth0"
