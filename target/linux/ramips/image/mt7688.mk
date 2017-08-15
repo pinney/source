@@ -35,13 +35,20 @@ define Device/wrtnode2r
 endef
 TARGET_DEVICES += wrtnode2r
 
-define Device/widora-neo
-  DTS := WIDORA-NEO
+define Device/widora-neo-16m
+  DTS := WIDORA-NEO-16M
   IMAGE_SIZE := $(ralink_default_fw_size_16M)
-  DEVICE_TITLE := Widora-NEO
+  DEVICE_TITLE := Widora-NEO-16M
   DEVICE_PACKAGES := kmod-usb2 kmod-usb-ohci
 endef
-TARGET_DEVICES += widora-neo
+
+define Device/widora-neo-32m
+  DTS := WIDORA-NEO-32M
+  IMAGE_SIZE := $(ralink_default_fw_size_32M)
+  DEVICE_TITLE := Widora-NEO-32M
+  DEVICE_PACKAGES := kmod-usb2 kmod-usb-ohci
+endef
+TARGET_DEVICES += widora-neo-16m widora-neo-32m 
 
 define Device/omega2
   DTS := OMEGA2

@@ -211,7 +211,8 @@ get_status_led() {
 	re6500|\
 	whr-1166d|\
 	whr-600d|\
-	widora-neo)
+	widora-neo-16m|\
+	widora-neo-32m)
 		status_led="$board:orange:wifi"
 		;;
 	mzk-ex300np|\

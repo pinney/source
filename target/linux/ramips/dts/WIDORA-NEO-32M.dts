@@ -1,0 +1,12 @@
+/dts-v1/;
+
+#include "WIDORA-NEO.dtsi"
+
+/ {
+	compatible = "widora,widora-neo-32m", "mediatek,mt7628an-soc";
+	model = "Widora-NEO-32M";
+};
+
+&firmware {
+	reg = <0x50000 0x1fb0000>;
+};

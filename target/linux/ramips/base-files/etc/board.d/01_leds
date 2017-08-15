@@ -368,6 +368,10 @@ w502u)
 	set_usb_led "$board:blue:usb"
 	set_wifi_led "rt2800pci-phy0::radio"
 	;;
+widora-neo-16m|\
+widora-neo-32m)
+	set_wifi_led "$board:orange:wifi"
+	;;
 wcr-150gn)
 	set_usb_led "$board:amber:user"
 	;;

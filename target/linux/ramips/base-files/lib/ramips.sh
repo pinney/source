@@ -562,8 +562,11 @@ ramips_board_detect() {
 	*"WHR-G300N")
 		name="whr-g300n"
 		;;
-	*"Widora-NEO")
-		name="widora-neo"
+	*"Widora-NEO-16M")
+		name="widora-neo-16m"
+		;;
+	*"Widora-NEO-32M")
+		name="widora-neo-32m"
 		;;
 	*"WiTi")
                 name="witi"
